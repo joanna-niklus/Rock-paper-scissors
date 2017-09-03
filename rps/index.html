@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>RPS</title>
+	<link rel="stylesheet" href="index.css">
+	<script type="text/javascript" src="index.js"></script>
+
+</head>
+
+<body>
+
+	<h1>A quick game of rock-paper-scissors?</h1>
+	<h2>O - rock, I - paper, X - scissors</h2>
+
+	
+
+	<button name="O" class="btn" onclick=clicking(this.name)>ROCK</button>
+	<button name="I" class="btn" onclick=clicking(this.name)>PAPER</button>
+	<button name="X" class="btn" onclick=clicking(this.name)>SCISSORS</button>
+
+	<center><div class = "division">
+		<div id = "names">
+			<div id = "playerName" class = "announce">player</div> <div id = "computerName" class = "announce">computer</div>
+		</div>
+
+		<div id = "playerChoice" class = "announce"></div><div id = "VS">VS</div><div id = "computerChoice" class = "announce"></div>
+
+		<div id = "winner" class = "announce">winner</div>
+
+		<div id = "score" class = "announce">
+			<div id = "playerScore">0</div>:<div id = "compScore">0</div>
+		</div>
+		<div id = "history" class = "announce">
+			
+		</div>
+	</div></center>
+
+	<button class="btn" onclick="changeName()">Do you want a name?</button>
+	<button class="btn" onclick="newGame()">Do you want to start again?</button>
+
+</body>
+
+</html>

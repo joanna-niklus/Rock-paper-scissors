@@ -1,0 +1,102 @@
+body {
+	background: linen;
+	text-align: center;
+}
+/*
+div {
+	border: 1px solid black;
+}*/
+
+.playerInput {
+	font-weight: bold;
+	padding: 10px;
+	background: linen;
+	border: 2px solid green;
+	color: gray;
+}
+
+.playerInput:hover {
+	background: #fafcb8;
+	color: black;
+
+}
+
+.division {
+	margin-top: 30px;
+	margin-bottom: 15px;
+	padding: 10px;
+	width: 600px;
+	align-self: center;
+}
+
+#choices {
+	text-align: center;
+	align-content: center;
+}
+
+.announce {
+	margin: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#playerScore {
+	display: inline-block;
+	padding: 10px;
+	margin: 5px;
+	font-size: 30px;
+}
+
+#compScore {
+	display: inline-block;
+	padding: 10px;
+	margin: 5px;
+	font-size: 30px;
+}
+
+#playerName, #computerName, #playerChoice, #computerChoice {
+	display: inline-block;
+	padding: 5px;
+}
+
+#playerName {
+	float: left;
+}
+
+#computerName {
+	float: right;
+}
+
+#playerName, #computerName {
+	border: 2px solid green;
+	background: #fafcb8;
+}
+
+#playerChoice, #computerChoice {
+	font-size: 30px;
+	width: 30px;
+}
+
+#VS {
+	width: 40px;
+	text-align: center;
+	align-items: center;
+	display: inline-block;
+	font-weight: bold;
+}
+
+.btn {
+	border: 2px solid green;
+	background: linen;
+	padding: 10px;
+	font-weight: bold;
+	color: gray;
+	margin: 5px;
+}
+
+.btn:hover {
+	border: 2px solid blue;
+	background: #fafcb8;
+}
