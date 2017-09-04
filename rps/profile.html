@@ -3,20 +3,22 @@
 
 <head>
 	<title>RPS</title>
-	<link rel="stylesheet" href="index.css">
-	<script type="text/javascript" src="index.js"></script>
+	<link rel="stylesheet" href="profile.css">
+	<script type="text/javascript" src="profile.js"></script>
 
 </head>
 
-<body>
+<body onload=loadProfiles()>
 
-	<select>
-	  <option value="volvo">Volvo</option>
-	  <option value="saab">Saab</option>
-	  <option value="mercedes">Mercedes</option>
-	  <option value="audi">Audi</option>
-	</select>
+<!-- dropdown menu with all the profiles from the DB displayed... -->
+	<select id="profile-select" onchange=updateTable(this.value)>
+		<!-- <option disabled selected value> -- select a profile -- </option> -->
+	</select> <button class="btn" onclick="window.alert('This needs improving')">Add</button>
 
+<!-- table with all the game sessions of the selected profile -->
+	<div align="center">
+		<table class="game-sessions" id="session-info"></table>
+	</div>
 </body>
 
 </html>
