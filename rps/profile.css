@@ -1,0 +1,64 @@
+body {
+	background: linen;
+	text-align: center;
+}
+
+#profile-select {
+	padding: 5px;
+	margin: 20px;
+	border: 1px solid green;
+	color: green;
+	border-radius: 20px/50px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#profile-select option {
+	padding: 5px;
+	border: 1px solid green;
+	color: green;
+}
+
+.game-sessions {
+	border-collapse: collapse;
+	border: none;
+	margin: 20px;
+	text-align: center;
+}
+
+.game-sessions th {
+	padding: 5px;
+	overflow: hidden;
+	word-break: normal;
+	color: green;
+}
+
+.game-sessions td {
+	padding: 5px;
+	overflow: hidden;
+	word-break: normal;
+	font-weight: normal;
+}
+
+.game-sessions tr {
+	border: 1px solid green;
+}
+
+.game-sessions tr:hover {
+	background-color: hsla(120, 100%, 25%, 0.3);
+}
+
+.btn {
+	border: 1px solid green;
+	background: linen;
+	padding: 10px;
+	font-weight: bold;
+	color: gray;
+	margin: 5px;
+	border-radius: 20px/50px;
+}
+
+.btn:hover {
+	border: 1px solid blue;
+	background: #fafcb8;
+}

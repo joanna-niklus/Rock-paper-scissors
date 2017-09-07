@@ -1,0 +1,156 @@
+textarea {
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid green;
+  border-radius: 5px;
+  width: 50%;
+  min-width: auto;
+  max-width: 100px;
+  height: 20px;
+  max-height: 25px;
+  min-height: auto;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: gray;
+  border: 2px solid green;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+  background-color: linen;
+  margin: 10px;
+}
+.button:hover {
+  background: green;
+  color: linen;
+  font-weight: bold;
+}
+
+#addNewBtn, #saveBtn, #resetBtn, #game-sessions-btn {
+  font-size: 12px;
+  margin: 5px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 900ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#game-sessions-btn {
+  visibility: hidden;
+  opacity: 0;
+}
+#game-sessions-btn:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 90px auto;
+  padding: 20px;
+  background: linen;
+  border-radius: 5px;
+  width: 70%;
+  min-width: 200px;
+  max-width: 300px;
+  position: relative;
+  transition: all 0.05s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: grey;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: green;
+}
+.popup .close:hover {
+  color: #b00000;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+.popup2 {
+  margin: 90px auto;
+  padding: 20px;
+  background: linen;
+  border-radius: 5px;
+  width: 550px;
+  position: relative;
+  transition: all 0.05s ease-in-out;
+}
+
+.popup2 h2 {
+  margin-top: 0;
+  color: grey;
+}
+.popup2 .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: green;
+}
+.popup2 .close:hover {
+  color: #b00000;
+}
+.popup2 .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+/*@media screen {
+  .popup{
+    width: 70%;
+  }
+}*/
+
+.form-area p {
+  margin: 10px;
+  color: grey;
+}
+
+.form-area input {
+  border: 1px solid green;
+  border-radius: 20px/50px;
+  padding: 5px;
+}
+
+#resetBtn:hover {
+  background-color: #b00000;
+  border: 2px solid #cc0000;
+  color: linen;
+}
+
+#saveBtn:hover {
+  background-color: darkblue;
+  border: 2px solid blue;
+  color: linen;
+}
