@@ -1,24 +1,62 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-	<title>RPS</title>
-	<link rel="stylesheet" href="profile.css">
-	<script type="text/javascript" src="profile.js"></script>
-
-</head>
-
-<body onload=loadProfiles()>
-
+	<head>
+		<title>RPS</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="profile.css">
+		<script type="text/javascript" src="profile.js"></script>
+		<link rel="stylesheet" type="text/css" href="addNewProfileForm.css">
+		<script type="text/javascript" src="addNewProfileForm.js"></script>
+	</head>
+	
+	<body onload=getData()>
+	
 <!-- dropdown menu with all the profiles from the DB displayed... -->
-	<select id="profile-select" onchange=updateTable(this.value)>
-		<!-- <option disabled selected value> -- select a profile -- </option> -->
-	</select> <button class="btn" onclick="window.alert('This needs improving')">Add</button>
-
+		<select id="profile-select" onchange='getSessions(this.value); displayTheStuff("game-sessions-btn")'>
+			<!-- <option disabled selected value> -- select a profile -- </option> -->
+		</select>
+		
+<!-- add new player form with a pop-up modal window -->
+		<!-- <button class="btn">Add new player</button> -->
+		<!-- <a class="button" href="#popup1">Add new player</a> -->
+		<a class="button" onclick="displayTheStuff('popup1')">Add new player</a>
+		<div id="popup1" class="overlay">
+			<div class="popup">
+				<h2>Fill in the form:</h2>
+				<a class="close" href="#" onclick="hideTheStuff('popup1')">&times;</a>
+				<div class="content">
+					<form class="form-area" method="POST">
+						<p>Username:</p>
+						<input type="text" id="new-username"><br>
+						<p>Age:</p>
+						<input type="number" min="0" max="100" id="new-age"><br>
+						<p>Country:</p>
+						<input type="text" id="new-country"><br>
+						<button class="button" onclick="saveTheStuff()" id="saveBtn">Save</button>
+						<button class="button" type="reset" id="resetBtn">Reset</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	
 <!-- table with all the game sessions of the selected profile -->
-	<div align="center">
+		<div align="center">
 		<table class="game-sessions" id="session-info"></table>
-	</div>
+		</div>
+		
+		<a class="button" id="game-sessions-btn" onclick="displayTheStuff('popup2'); fillTheTable()">Modify game sessions</a>
+		
+		<div id="popup2" class="overlay">
+			<div class="popup2">
+				<h2>Modify game sessions</h2>
+				<a class="close" href="#" onclick="hideTheStuff('popup2')">&times;</a>
+				<div class="content">
+				<table class="game-sessions" id="insert-game-session-info"></table>
+				</div>
+				<button class="button" id="addNewBtn" onclick="addNewEntry()">Add new entry</button>
+				<button class="button" id="saveBtn" onclick="saveTheSessionStuff()">Save</button>
+				<button class="button" type="reset" id="resetBtn">Reset</button>
+			</div>
+		</div>
 </body>
-
 </html>
